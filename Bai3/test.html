@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Sách ABC</title>
+    <meta name="theme-color" content="#2c3e50">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <h1>Cửa hàng Sách ABC</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" aria-hidden="true">
+            <div class="container">
+                <h2>Khám phá những câu chuyện truyền cảm hứng</h2>
+                <p>Chọn cuốn sách phù hợp — giao hàng nhanh, giá cả hợp lý.</p>
+                <a class="btn-primary" href="#products">Xem sản phẩm</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Giới thiệu</h2>
+                <p>Chúng tôi cung cấp sách đa dạng: tiểu thuyết, kỹ năng sống và học thuật. Giao hàng nhanh, giá hợp lý.</p>
+            </div>
+        </section>
+
+        <section aria-labelledby="products" class="products-section">
+            <div class="container">
+                <h2 id="products">Sản phẩm</h2>
+
+                <!-- toolbar tìm kiếm + nút Thêm sản phẩm -->
+                <div class="products-toolbar" style="margin:0 0 1rem; display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm..." aria-label="Tìm kiếm sản phẩm">
+                    <button id="searchBtn" class="btn-primary" type="button">Tìm</button>
+                    <button id="addProductBtn" class="btn-primary" type="button" style="background:linear-gradient(90deg,var(--accent),#c43b34);">Thêm sản phẩm</button>
+                </div>
+
+                <!-- form thêm sản phẩm (ẩn mặc định) -->
+                <form id="addProductForm" class="hidden" aria-hidden="true" style="margin-bottom:1rem;">
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:0.75rem;">
+                        <div>
+                            <label for="p-name">Tên sản phẩm</label>
+                            <input id="p-name" name="name" type="text" required>
+                        </div>
+                        <div>
+                            <label for="p-price">Giá</label>
+                            <input id="p-price" name="price" type="text" required placeholder="120.000₫">
+                        </div>
+                        <div style="grid-column:1 / -1;">
+                            <label for="p-img">URL ảnh</label>
+                            <input id="p-img" name="image" type="url" placeholder="https://..." required>
+                        </div>
+                        <div style="grid-column:1 / -1;">
+                            <label for="p-desc">Mô tả</label>
+                            <textarea id="p-desc" name="desc" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div style="margin-top:0.75rem; display:flex; gap:0.5rem;">
+                        <button type="submit" class="btn-primary">Thêm</button>
+                        <button type="button" id="cancelAdd" class="btn-primary" style="background:rgba(0,0,0,0.08); color:var(--primary);">Hủy</button>
+                    </div>
+                </form>
+
+                <div class="products-grid">
+                    <article class="card product-item">
+                        <div class="media">
+                            <img src="https://upload.wikimedia.org/wikipedia/vi/f/fa/Kh%C3%B4ng_gia_%C4%91%C3%ACnh_1_%28s%C3%A1ch%29.jpg" alt="khong-gia-dinh">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-name">Không gia đình</h3>
+                            <p>Một cuốn sách truyền cảm hứng về hành trình trưởng thành.</p>
+                            <p class="price"><strong>120.000₫</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="card product-item">
+                        <div class="media">
+                            <img src="https://ntthnue.edu.vn/uploads/Images/2013/10/198.jpg" alt="so-do">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-name">Số đỏ</h3>
+                            <p>Hướng dẫn phát triển kỹ năng giao tiếp và quản lý thời gian.</p>
+                            <p class="price"><strong>95.000₫</strong></p>
+                        </div>
+                    </article>
+
+                    <article class="card product-item">
+                        <div class="media">
+                            <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1720557968i/216298765.jpg" alt="Meow">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-name">Meow</h3>
+                            <p>Mewo meow meow meow meow meow</p>
+                            <p class="price"><strong>150.000₫</strong></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="contact">
+            <div class="container">
+                <h2 id="contact">Liên hệ</h2>
+                <form action="#" method="post">
+                    <div>
+                        <label for="name">Tên</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Nội dung</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Gửi</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>© 2025 Cửa hàng Sách ABC — Địa chỉ: Hà Nội</p>
+            <small>Follow: <a href="#">Facebook</a> · <a href="#">Instagram</a></small>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

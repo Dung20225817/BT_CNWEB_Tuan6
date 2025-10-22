@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Sách ABC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cửa hàng Sách ABC</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Giới thiệu</h2>
+            <p>Chúng tôi cung cấp sách đa dạng: tiểu thuyết, kỹ năng sống và học thuật. Giao hàng nhanh, giá hợp lý.</p>
+        </section>
+
+        <section aria-labelledby="products">
+            <h2 id="products">Sản phẩm</h2>
+
+            <article>
+                <h3>Không gia đình</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/vi/f/fa/Kh%C3%B4ng_gia_%C4%91%C3%ACnh_1_%28s%C3%A1ch%29.jpg" alt="khong-gia-dinh">
+                <p>Một cuốn sách truyền cảm hứng về hành trình trưởng thành.</p>
+                <p>Giá: <strong>120.000₫</strong></p>
+            </article>
+
+            <article>
+                <h3>Số đỏ</h3>
+                <img src="https://ntthnue.edu.vn/uploads/Images/2013/10/198.jpg" alt="so-do">
+                <p>Hướng dẫn phát triển kỹ năng giao tiếp và quản lý thời gian.</p>
+                <p>Giá: <strong>95.000₫</strong></p>
+            </article>
+
+            <article>
+                <h3>Meow</h3>
+                <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1720557968i/216298765.jpg" alt="Meow">
+                <p>Mewo meow meow meow meow meow</p>
+                <p>Giá: <strong>150.000₫</strong></p>
+            </article>
+        </section>
+
+        <section aria-labelledby="contact">
+            <h2 id="contact">Liên hệ</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Tên</label><br>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Nội dung</label><br>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Cửa hàng Sách ABC — Địa chỉ: Hà Nội</p>
+    </footer>
+</body>
+</html>
